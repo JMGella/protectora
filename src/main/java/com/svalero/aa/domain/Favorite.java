@@ -1,12 +1,10 @@
 package com.svalero.aa.domain;
 
-import com.svalero.aa.dao.Database;
-import com.svalero.aa.dao.DogDao;
-import com.svalero.aa.dao.FavDao;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.jdbi.v3.sqlobject.statement.SqlQuery;
+
 
 @NoArgsConstructor
 @AllArgsConstructor

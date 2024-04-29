@@ -6,9 +6,6 @@ import com.svalero.aa.dao.FavDao;
 import lombok.Data;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
-
-import java.sql.SQLException;
-import java.time.LocalDateTime;
 import java.sql.Date;
 
 @NoArgsConstructor

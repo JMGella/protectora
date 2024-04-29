@@ -43,13 +43,13 @@ public class Fav extends HttpServlet {
 
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
-            response.getWriter().println("<div class='alert alert-warning' role='alert'>" + "Internal Server Error" + "</div>");
-            return;
+            response.getWriter().println("Internal Server Error");
+
 
         } catch (SQLException sqle) {
             sqle.printStackTrace();
-            response.getWriter().println("<div class='alert alert-warning' role='alert'>" + "Error conectando con la Base de Datos" + "</div>");
-            return;
+            response.getWriter().println("Error conectando con la Base de Datos");
+
         }
 
     }

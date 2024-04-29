@@ -1,6 +1,5 @@
 package com.svalero.aa.dao;
 import com.svalero.aa.domain.Adoption;
-import com.svalero.aa.domain.Favorite;
 import org.jdbi.v3.sqlobject.statement.SqlQuery;
 import org.jdbi.v3.sqlobject.statement.SqlUpdate;
 import org.jdbi.v3.sqlobject.statement.UseRowMapper;
@@ -12,13 +11,6 @@ public interface AdoptDao {
     @UseRowMapper(AdoptMapper.class)
     List<Adoption> getAllAdoptions();
 
-    @SqlQuery("SELECT * FROM adoptions WHERE user_id = ?")
-    @UseRowMapper(AdoptMapper.class)
-    Adoption getAdoptionByUser(int user_id);
-
-    @SqlQuery("SELECT * FROM adoptions WHERE dog_id = ?")
-    @UseRowMapper(AdoptMapper.class)
-    Adoption getAdoptionByDog(int dog_id);
 
     @SqlUpdate("DELETE FROM adoptions WHERE dog_id = ?")
     int removeAdoption(int dog_id);

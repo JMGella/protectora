@@ -1,7 +1,6 @@
 package com.svalero.aa.servlet;
 
 import com.svalero.aa.dao.Database;
-import com.svalero.aa.dao.DogDao;
 import com.svalero.aa.dao.FavDao;
 
 import javax.servlet.ServletException;

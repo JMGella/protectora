@@ -2,7 +2,6 @@ package com.svalero.aa.dao;
 
 
 import com.svalero.aa.domain.Adoption;
-import com.svalero.aa.domain.Favorite;
 import org.jdbi.v3.core.mapper.RowMapper;
 import org.jdbi.v3.core.statement.StatementContext;
 
