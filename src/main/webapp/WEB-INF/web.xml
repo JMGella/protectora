@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<web-app>
+    <display-name>ActividadAprendizaje</display-name>
+    <context-param>
+        <description>Ruta para las fotos</description>
+        <param-name>image-path</param-name>
+        <param-value>C:\apache-tomcat-9.0.86\webapps\AA_pictures</param-value>
+    </context-param>
+</web-app>
