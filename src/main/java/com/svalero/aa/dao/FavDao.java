@@ -33,4 +33,7 @@ public interface FavDao {
     @SqlUpdate("DELETE FROM favorites WHERE dog_id = ?")
     int removeFavoritebyDog(int dog_id);
 
+    @SqlUpdate("DELETE FROM favorites WHERE user_id = ?")
+    int removeFavbyuser(int user_id);
+
 }

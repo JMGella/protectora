@@ -18,4 +18,7 @@ public interface AdoptDao {
     @SqlUpdate("INSERT INTO adoptions (dog_id, user_id) VALUES (?, ?)")
     int adoptDog(int dog_id, int user_id);
 
+    @SqlUpdate("DELETE FROM adoptions WHERE user_id = ?")
+    int removeAdoptbyuser(int user_id);
+
 }

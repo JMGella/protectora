@@ -29,4 +29,10 @@ public interface RequestDao {
 
     @SqlUpdate("DELETE FROM request WHERE req_id = ?")
     int removeRequest(int req_id);
+
+    @SqlUpdate("DELETE FROM request WHERE user_id = ?")
+    int removeRequestbyUser(int user_id);
+
+    @SqlUpdate("DELETE FROM request WHERE dog_id = ?")
+    int removeRequestbyDog(int dog_id);
 }

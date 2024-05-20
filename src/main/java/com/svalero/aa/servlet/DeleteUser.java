@@ -10,9 +10,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 
-@WebServlet("/RemoveDogServlet")
+@WebServlet("/DeleteUserServlet")
 
-public class RemoveDog extends HttpServlet {
+public class DeleteUser extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -20,11 +20,12 @@ public class RemoveDog extends HttpServlet {
 
         try {
             Database.connect();
-            Database.jdbi.withExtension((RequestDao.class), dao -> dao.removeRequestbyDog(id));
-            Database.jdbi.withExtension(FavDao.class, dao -> dao.removeFavoritebyDog(id));
-            Database.jdbi.withExtension(AdoptDao.class, dao -> dao.removeAdoption(id));
-            int affectedRows = Database.jdbi.withExtension(DogDao.class, dao -> dao.removeDog(id));
-            response.sendRedirect("index.jsp");
+            Database.jdbi.withExtension((AdoptDao.class), dao -> dao.removeAdoptbyuser(id));
+            Database.jdbi.withExtension((FavDao.class), dao -> dao.removeFavbyuser(id));
+            Database.jdbi.withExtension(RequestDao.class, dao -> dao.removeRequestbyUser(id));
+            Database.jdbi.withExtension(UserDao.class, dao -> dao.removeUser(id));
+
+            response.sendRedirect("userlist.jsp");
 
         } catch (ClassNotFoundException cnfe) {
             cnfe.printStackTrace();

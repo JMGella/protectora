@@ -51,6 +51,7 @@
                 <li><a href="adoptions.jsp" class="nav-link px-2 link-body-emphasis">Adopciones</a></li>
                 <% if(role.equals("admin")) { %>
                 <li><a href="requestlist.jsp" class="nav-link px-2 link-body-emphasis">Peticiones</a></li>
+                <li><a href="userlist.jsp" class="nav-link px-2 link-body-emphasis">Usuarios</a></li>
                 <% } %>
                 <% if(!role.equals("anonymous")) { %>
                 <li><a href="favs.jsp" class="nav-link px-2 link-body-emphasis">Favoritos</a></li>
