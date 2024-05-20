@@ -19,11 +19,6 @@ public class Requests extends HttpServlet {
 
         HttpSession currentSession = request.getSession();
 
-        if (currentSession.getAttribute("role") != null) {
-            if (!currentSession.getAttribute("role").equals("anonymous")) {
-                response.sendRedirect("/ActividadAprendizaje");
-            }
-        }
 
         int dog_id = Integer.parseInt(request.getParameter("dog_id"));
         int user_id = Integer.parseInt(currentSession.getAttribute("id").toString());
