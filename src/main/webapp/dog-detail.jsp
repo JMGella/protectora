@@ -51,13 +51,20 @@
             } else {
 
             %>
-            <a href="FavDogServlet?dog_id=<%=dog_id%>&detail=1" type="button" id="fav-button" class="btn btn-primary btn-lg px-4 me-md-2 mr-2" onClick="popup()">Añadir a Favoritos</a>
+            <a href="FavDogServlet?dog_id=<%=dog_id%>" type="button" id="fav-button" class="btn btn-primary btn-lg px-4 me-md-2 mr-2" onClick="popup()">Añadir a Favoritos</a>
             <script>
                 function popup() {
                     alert("Favorito añadido");
                 </script>
 
-            <% }}
+
+            <% }
+                %>
+            <a href="request-form.jsp?dog_id=<%=dog_id%>" type="button" id="request-button" class="btn btn-primary btn-lg px-4 me-md-2 mr-2"">Adóptalo</a>
+
+            <%
+
+                }
             }
                 if (role.equals("admin")) {
             %>

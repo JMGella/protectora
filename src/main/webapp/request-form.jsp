@@ -37,7 +37,7 @@
 
 <%
         Database.connect();
-        int dog_id = Integer.parseInt(request.getParameter("id"));
+        int dog_id = Integer.parseInt(request.getParameter("dog_id"));
         Dog dog = Database.jdbi.withExtension(DogDao.class, dao -> dao.getDog(dog_id));
 
 %>
