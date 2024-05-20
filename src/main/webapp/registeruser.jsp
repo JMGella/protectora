@@ -40,16 +40,20 @@
             <div class="col">
             </div>
             <div class="col">
+                <% if (userId==0){ %>
                 <h1 class="h3 mb-3 fw-normal">Registro de nuevo usuario</h1>
+                <% } else { %>
+                <h1 class="h3 mb-3 fw-normal">Editar usuario</h1>
+                <% } %>
                 <form method="post" enctype="multipart/form-data" id="register-form">
                     <div class="mb-3 form-floating">
                         <label for="inputNombre" class="form-label">Nombre</label>
-                        <input type="text" class="form-control" id="inputNombre" name="name" placeholder="Nombre" >
+                        <input type="text" class="form-control" id="inputNombre" name="name" placeholder="<%if (userId==0){%>Nombre<%}else{%><%=name%><%}%>" >
                     </div>
 
                     <div class="mb-3 form-floating">
                         <label for="inputUsuario" class="form-label">Usuario</label>
-                        <input type="text" class="form-control" id="inputUsuario" name="username" placeholder="Usuario" >
+                        <input type="text" class="form-control" id="inputUsuario" name="username" placeholder="<%if (userId==0){%>Usuario<%}else{%><%=username%><%}%>" >
                     </div>
 
 
@@ -57,8 +61,8 @@
                         <label for="inputPassword" class="form-label">Contraseña</label>
                         <input type="password" class="form-control" id="inputPassword" name="password" placeholder="*********" >
                     </div>
-
-                    <button type="submit" class="btn btn-primary" id="register-button">Registrarse</button>
+                    <input type="hidden" name="id" value="<%= userId %>"/>
+                    <button type="submit" class="btn btn-primary" id="register-button"><%if(userId==0){%>Registrarse<%}else{%>Actualizar datos<%}%></button>
 
 
                 </form>

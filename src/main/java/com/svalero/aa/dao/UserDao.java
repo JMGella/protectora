@@ -32,6 +32,9 @@ public interface UserDao {
     @SqlUpdate("DELETE FROM users WHERE id = ?")
     int removeUser(int id);
 
+    @SqlUpdate("UPDATE users SET name = ?, username = ?, password = SHA1(?) WHERE id = ?")
+    int updateUser(String name, String username, String password, int id);
+
 }
 
 

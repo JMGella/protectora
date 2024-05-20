@@ -72,8 +72,10 @@
 <div class="b-example-divider"></div>
 
 
-        <% } else { %>
+        <% } else {
 
+        String nombreusuario = session.getAttribute("name").toString();
+        %>
 
 <div class="b-example-divider"></div>
 <div class="container col-xxl-8 px-4 py-5">
@@ -84,7 +86,7 @@
         <div class="col-lg-6">
             <h1 class="display-5 fw-bold text-body-emphasis text-center lh-1">Protectora de Animales </h1>
             <h1 class="display-5 fw-bold text-body-emphasis text-center lh-1 mb-4">San Valero </h1>
-            <h3> ¡Hola <%=name%>,</h3>
+            <h3> ¡Hola <%=nombreusuario%>,</h3>
             <h3>nos alegramos de volver a verte! </h3>
             <p class="lead mb-5">En esta página podras ver todos los perritos que tenemos disponibles para adoptar. Si te enamoras de alguno, márcalo como favorito. Y si te lo quieres llevar a casa...</p>
             <div class="d-grid gap-2 d-md-flex justify-content-center">
