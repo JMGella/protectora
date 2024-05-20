@@ -13,4 +13,5 @@ public class Request {
     private int dog_id;
     private int user_id;
     private String req_text;
+    private String city;
 }

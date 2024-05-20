@@ -14,6 +14,7 @@ public class RequestMapper implements RowMapper<Request> {
         return new Request(rs.getInt("req_id"),
                 rs.getInt("dog_id"),
                 rs.getInt("user_id"),
-                rs.getString("req_text"));
+                rs.getString("req_text"),
+                rs.getString("city"));
     }
 }

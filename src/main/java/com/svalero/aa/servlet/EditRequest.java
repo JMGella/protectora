@@ -9,9 +9,9 @@ import javax.servlet.http.*;
 import java.io.IOException;
 import java.sql.SQLException;
 
-@WebServlet("/RequestServlet")
+@WebServlet("/EditRequestServlet")
 @MultipartConfig
-public class Requests extends HttpServlet {
+public class EditRequest extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("text/html");
@@ -22,6 +22,7 @@ public class Requests extends HttpServlet {
 
         int dog_id = Integer.parseInt(request.getParameter("dog_id"));
         int user_id = Integer.parseInt(currentSession.getAttribute("id").toString());
+        int req_id = Integer.parseInt(request.getParameter("req_id"));
 
 
         String text = request.getParameter("req_text");
@@ -36,24 +37,24 @@ public class Requests extends HttpServlet {
             return;
         }
 
-         try {
-                Database.connect();
-                int affectedRows = Database.jdbi.withExtension(RequestDao.class, dao -> dao.addRequest(dog_id, user_id, text,city));
+        try {
+            Database.connect();
+            int affectedRows = Database.jdbi.withExtension(RequestDao.class, dao -> dao.updateRequest(dog_id, user_id, text, city, req_id));
 
-                if (affectedRows == 1) {
-                 response.getWriter().println("<div class='alert alert-success' role='alert'>" + "Solicitud enviada correctamente." + "</div><br><a class='btn btn-primary' href='/ActividadAprendizaje'>Volver al inicio</a>");
-                } else {
-                 response.getWriter().println("<div class='alert alert-warning' role='alert'>" + "Error al insertar la solicitud." + "</div>");
-                }
+            if (affectedRows == 1) {
+                response.getWriter().println("<div class='alert alert-success' role='alert'>" + "Solicitud enviada correctamente." + "</div><br><a class='btn btn-primary' href='/ActividadAprendizaje'>Volver al inicio</a>");
+            } else {
+                response.getWriter().println("<div class='alert alert-warning' role='alert'>" + "Error al insertar la solicitud." + "</div>");
+            }
 
-          } catch (ClassNotFoundException cnfe) {
-                cnfe.printStackTrace();
-                response.getWriter().println("<div class='alert alert-warning' role='alert'>" + "Error en la base de datos." + "</div>");
-          } catch (SQLException sqle){
-                sqle.printStackTrace();
-                response.getWriter().println("<div class='alert alert-warning' role='alert'>" + "Error en la base de datos." + "</div>");
+        } catch (ClassNotFoundException cnfe) {
+            cnfe.printStackTrace();
+            response.getWriter().println("<div class='alert alert-warning' role='alert'>" + "Error en la base de datos." + "</div>");
+        } catch (SQLException sqle){
+            sqle.printStackTrace();
+            response.getWriter().println("<div class='alert alert-warning' role='alert'>" + "Error en la base de datos." + "</div>");
 
-          }
+        }
 
 
     }

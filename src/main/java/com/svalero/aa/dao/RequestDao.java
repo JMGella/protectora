@@ -1,4 +1,5 @@
 package com.svalero.aa.dao;
+import com.svalero.aa.domain.Dog;
 import com.svalero.aa.domain.Request;
 import org.jdbi.v3.sqlobject.customizer.Bind;
 import org.jdbi.v3.sqlobject.statement.SqlQuery;
@@ -24,8 +25,8 @@ public interface RequestDao {
     @UseRowMapper(RequestMapper.class)
     List<Request> getSearchRequest(@Bind("searchTerm") String searchTerm);
 
-    @SqlUpdate("INSERT INTO request(dog_id, user_id, req_text) VALUES (?, ?, ?)")
-    int addRequest(int dog_id, int user_id, String req_text);
+    @SqlUpdate("INSERT INTO request(dog_id, user_id, req_text, city) VALUES (?, ?, ? ,?)")
+    int addRequest(int dog_id, int user_id, String req_text, String city);
 
     @SqlUpdate("DELETE FROM request WHERE req_id = ?")
     int removeRequest(int req_id);
@@ -35,4 +36,12 @@ public interface RequestDao {
 
     @SqlUpdate("DELETE FROM request WHERE dog_id = ?")
     int removeRequestbyDog(int dog_id);
+
+    @SqlQuery("SELECT * FROM request WHERE req_id = ?")
+    @UseRowMapper(RequestMapper.class)
+    Request getRequestById(int req_id);
+
+    @SqlUpdate("UPDATE request SET dog_id = ?, user_id = ?, req_text = ?, city = ? WHERE req_id = ?")
+    int updateRequest(int dog_id, int user_id, String req_text, String city, int req_id);
+
 }

@@ -18,11 +18,13 @@ public class DeleteRequest extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int id = Integer.parseInt(request.getParameter("req_id"));
 
+
         try {
             Database.connect();
             Database.jdbi.withExtension(RequestDao.class, dao -> dao.removeRequest(id));
 
             response.sendRedirect("requestlist.jsp");
+
 
         } catch (ClassNotFoundException cnfe) {
             cnfe.printStackTrace();

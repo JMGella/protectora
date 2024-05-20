@@ -39,7 +39,7 @@
             <p class="lead mb-5">En esta página podras ver todos los perritos que tenemos disponibles para adoptar. Puedes gestionar las fichas de los perros, añadir nuevos perros y eliminarlos.</p>
             <div class="d-grid gap-2 d-md-flex justify-content-md-start">
                 <a type="button" class="btn btn-primary btn-lg px-4 me-md-2 mr-2" href="edit-dog.jsp">Registrar Perro</a>
-                <a type="button" class="btn btn-outline-secondary btn-lg px-4 mr-2" href="#">Adopciones</a>
+                <a type="button" class="btn btn-outline-secondary btn-lg px-4 mr-2" href="adoptions.jsp">Adopciones</a>
                 <a type="button" class="btn btn-light btn-lg px-4" href="LogoutServlet">Cerrar Sesión</a>
             </div>
         </div>

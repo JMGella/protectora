@@ -18,7 +18,7 @@
             $.ajax({
                 type: "POST",
                 enctype: "multipart/form-data",
-                url: "RequestServlet",
+                url: "EditRequestServlet",
                 data: data,
                 processData: false,
                 contentType: false,
@@ -42,6 +42,7 @@
     Database.connect();
     int dog_id = Integer.parseInt(request.getParameter("dog_id"));
     Dog dog = Database.jdbi.withExtension(DogDao.class, dao -> dao.getDog(dog_id));
+    int req_id = Integer.parseInt(request.getParameter("req_id"));
 
 %>
 
@@ -66,6 +67,7 @@
                     </div>
 
                     <input type="hidden" name="dog_id" value="<%=dog_id%>"/>
+                    <input type="hidden" name="req_id" value="<%=req_id%>"/>
 
                     <button type="submit" class="btn btn-primary" id="request-button">Enviar petición</button>
 
