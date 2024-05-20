@@ -21,7 +21,7 @@ public interface RequestDao {
     @UseRowMapper(RequestMapper.class)
     List<Request> getRequestsByDog(int dog_id);
 
-    @SqlQuery("SELECT * FROM request WHERE dog_id LIKE CONCAT('%',:searchTerm,'%') OR user_id LIKE CONCAT('%',:searchTerm,'%') OR req_text LIKE CONCAT('%',:searchTerm,'%')")
+    @SqlQuery("SELECT * FROM request WHERE dog_id LIKE CONCAT('%',:searchTerm,'%') OR user_id LIKE CONCAT('%',:searchTerm,'%') OR req_text LIKE CONCAT('%',:searchTerm,'%') OR city LIKE CONCAT('%',:searchTerm,'%')")
     @UseRowMapper(RequestMapper.class)
     List<Request> getSearchRequest(@Bind("searchTerm") String searchTerm);
 
