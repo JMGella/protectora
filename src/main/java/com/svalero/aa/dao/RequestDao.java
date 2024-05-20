@@ -27,4 +27,6 @@ public interface RequestDao {
     @SqlUpdate("INSERT INTO request(dog_id, user_id, req_text) VALUES (?, ?, ?)")
     int addRequest(int dog_id, int user_id, String req_text);
 
+    @SqlUpdate("DELETE FROM request WHERE req_id = ?")
+    int removeRequest(int req_id);
 }

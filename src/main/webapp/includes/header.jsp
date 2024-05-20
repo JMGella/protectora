@@ -49,6 +49,9 @@
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-around mb-md-0">
                 <li><a href="index.jsp" class="nav-link px-2 link-secondary">Perros</a></li>
                 <li><a href="adoptions.jsp" class="nav-link px-2 link-body-emphasis">Adopciones</a></li>
+                <% if(role.equals("admin")) { %>
+                <li><a href="requestlist.jsp" class="nav-link px-2 link-body-emphasis">Peticiones</a></li>
+                <% } %>
                 <% if(!role.equals("anonymous")) { %>
                 <li><a href="favs.jsp" class="nav-link px-2 link-body-emphasis">Favoritos</a></li>
                 <% } %>

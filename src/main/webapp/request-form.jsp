@@ -42,19 +42,20 @@
 
 %>
 
-<img src="../AA_pictures/<%= dog.getPicture() %>" class="card-img-top" style="object-fit: cover" width="100%" height="225"  </img>
+
 
 <main class="form-signin w-100 m-auto">
     <div class="container mt-5">
         <div class="row">
-            <div class="col">
+            <div class="col"> <img src="../AA_pictures/<%= dog.getPicture() %>" class="card-img-top" style="object-fit: cover" width="540"   </img>
+
             </div>
             <div class="col">
                 <h1 class="h3 mb-3 fw-normal">Petición de adopción</h1>
                 <form method="post" enctype="multipart/form-data" id="request-form">
                     <div class="mb-3 form-floating">
                         <label for="inputtexto" class="form-label">Cuentanos sobre ti y por que quieres adoptar a <%=dog.getName()%></label>
-                        <textarea name="req_text" class="form-control"  id="inputtexto">Escribe aquí</textarea>
+                        <textarea name="req_text" class="form-control"  id="inputtexto"></textarea>
 
                     </div>
 
@@ -65,8 +66,7 @@
 
                 </form>
             </div>
-            <div class="col">
-            </div>
+
         </div><br/>
         <div class="container">
             <div class="col"></div>

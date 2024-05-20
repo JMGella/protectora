@@ -50,9 +50,9 @@
             </div>
 
             <% }} else if (role.equals("admin")){ %>
-            <div class="container mt-5">
-
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                    <div class="album py-5">
+                        <div class="container">
+                            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                     <%
                         Database.connect();
                         List<Favorite> allfavs = Database.jdbi.withExtension(FavDao.class, dao -> dao.getAllFavorites());
@@ -63,8 +63,16 @@
                             User user = Database.jdbi.withExtension(UserDao.class, dao -> dao.getUserid(user_id));
 
                     %>
-
-                                <p class="card-text"><strong><a href="dog-detail.jsp?id=<%= dog.getId() %>"><%=dog.getName()%></a> ha sido marcado favorito por: <%= user.getName() %> </strong></p>
+                                <div class="col mb-5">
+                                    <div class="card shadow">
+                                        <img src="../AA_pictures/<%= dog.getPicture() %>" class="card-img-top" style="object-fit: cover" width="100%" height="225"  </img>
+                                        <div class="card-body">
+                                            <p class="card-text"><strong><%= dog.getName() %></strong></p>
+                                            <p class="card-text"><%= dog.getDescription() %></p>
+                                            <p class="card-text"><strong><a href="dog-detail.jsp?id=<%= dog.getId() %>"><%=dog.getName()%></a> ha sido marcado favorito por: <%= user.getName() %> </strong></p>
+                                        </div>
+                                    </div>
+                                </div>
 
                     <% }
                         } else {
