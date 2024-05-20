@@ -14,8 +14,7 @@
 
 
 <div class="container mt-5">
-   <% if(!role.equals("admin")) { %><h5> Si quieres adoptar, envianos un mail a <a href="mailto:protectora@sanvalero.com">protectora@sanvalero.com</a> con tus datos y los del perro que quieres adoptar.</h5>
-    <p>Responderemos lo antes posible. Gracias por querer dar un hogar a uno de nuestros peludos.</p>
+   <% if(!role.equals("admin")) { %><h5> Si quieres adoptar, rellena el formulario en el botón <i>Adóptalo</i> el la ficha del perro. </h5>
     <%} %>
 
 <h1 class="mb-5 mt-5">Últimas adopciones: </h1>

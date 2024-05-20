@@ -79,8 +79,7 @@
                         response.sendRedirect("login.jsp");}%>
         </div>
                 <% if (role.equals("user")) { %>
-                <h5> Si quieres adoptar a uno de estos perros, envianos un mail a <a href="mailto:protectora@sanvalero.com">protectora@sanvalero.com</a> con tus datos y los del perro que quieres adoptar.</h5>
-                <p>Responderemos lo antes posible. Gracias por querer dar un hogar a uno de nuestros peludos.</p>
+                            <h5>Si quieres adoptar, rellena el formulario en el botón <i>Adóptalo</i> el la ficha del perro.</h5>
                 <% } %>
     </div>
 
