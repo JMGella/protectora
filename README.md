@@ -4,7 +4,7 @@ Este repositorio contiene un proyecto de una protectora de animales desarrollado
 
 ## Tecnologías utilizadas
 - **JSP**: Para la creación de páginas web dinámicas.
-- ** MySQL**: Para la gestión de la base de datos.
+- **MySQL**: Para la gestión de la base de datos.
 - **Bootstrap**: Para el diseño y la estructura responsive de la interfaz de usuario.
 - **Apache Tomcat**: Como servidor de aplicaciones para desplegar la aplicación JSP.
 
