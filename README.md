@@ -10,7 +10,7 @@ Este repositorio contiene un proyecto de una protectora de animales desarrollado
 - **MySQL**: Para la gestión de la base de datos.
 - **Bootstrap**: Para el diseño y la estructura responsive de la interfaz de usuario.
 - **Apache Tomcat**: Como servidor de aplicaciones para desplegar la aplicación JSP.
-- **JavaScript**: Para la ejecución asincrona en los formularios.
+- **JavaScript**: Para la ejecución asíncrona en los formularios.
 
 ## Funcionalidades del Proyecto
 
