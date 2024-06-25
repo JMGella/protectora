@@ -2,6 +2,12 @@
 
 Este repositorio contiene un proyecto de una protectora de animales desarrollado con JSP (JavaServer Pages). El sistema permite la gestión de perros y usuarios, ofreciendo funcionalidades tanto para los administradores como para los usuarios.
 
+## Tecnologías utilizadas
+- **JSP**: Para la creación de páginas web dinámicas.
+- ** MySQL**: Para la gestión de la base de datos.
+- **Bootstrap**: Para el diseño y la estructura responsive de la interfaz de usuario.
+- **Apache Tomcat**: Como servidor de aplicaciones para desplegar la aplicación JSP.
+
 ## Funcionalidades del Proyecto
 
 ### Funcionalidades del Administrador
