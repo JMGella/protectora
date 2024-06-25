@@ -1,5 +1,8 @@
 # Protectora de Animales - CRUD con JSP
 
+
+![Perros](imagen.png)
+
 Este repositorio contiene un proyecto de una protectora de animales desarrollado con JSP (JavaServer Pages). El sistema permite la gestión de perros y usuarios, ofreciendo funcionalidades tanto para los administradores como para los usuarios.
 
 ## Tecnologías utilizadas
