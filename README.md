@@ -98,9 +98,6 @@ Este repositorio contiene un proyecto de una protectora de animales desarrollado
 4. Sube los cambios a tu fork (`git push origin feature/nueva-funcionalidad`).
 5. Crea un Pull Request al repositorio principal.
 
-## Licencia
-
-Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo `LICENSE` para más detalles.
 
 ---
 
