@@ -10,6 +10,7 @@ Este repositorio contiene un proyecto de una protectora de animales desarrollado
 - **MySQL**: Para la gestión de la base de datos.
 - **Bootstrap**: Para el diseño y la estructura responsive de la interfaz de usuario.
 - **Apache Tomcat**: Como servidor de aplicaciones para desplegar la aplicación JSP.
+- **JavaScript**: Para la ejecución asincrona en los formularios.
 
 ## Funcionalidades del Proyecto
 
@@ -19,14 +20,17 @@ Este repositorio contiene un proyecto de una protectora de animales desarrollado
   - Alta de nuevos perros.
   - Modificación de datos de perros existentes.
   - Baja de perros.
+  - Barra de busqueda.
   
 - **Gestión de Adopciones**:
   - Aceptación de solicitudes de adopción.
   - Visualización del estado de los perros (adoptados/no adoptados).
+  - Barra de busqueda.
 
 - **Gestión de Usuarios**:
   - Listado de usuarios registrados.
   - Modificar usuarios.
+  - Barra de busqueda
 
 - **Consultas**:
   - Consulta de las últimas adopciones.
